@@ -1,5 +1,5 @@
 {
-  "name": "react-figma-boilerplate",
+  "name": "reflexbox-react-figma",
   "version": "1.0.0",
   "description": "Boilerplate app for react-figma",
   "main": "./src/code.tsx",
@@ -21,8 +21,13 @@
   "license": "ISC",
   "dependencies": {
     "@figma/plugin-typings": "^1.16.1",
+    "@styled-system/css": "^5.1.5",
+    "@styled-system/should-forward-prop": "^5.1.5",
     "react": "^16.9.0",
-    "react-figma": "latest"
+    "react-figma": "latest",
+    "react-primitives": "^0.8.1",
+    "styled-components": "^5.1.1",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "html-webpack-inline-source-plugin": "^0.0.10",
