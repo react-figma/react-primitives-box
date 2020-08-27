@@ -10,7 +10,7 @@ import {
 } from 'styled-system'
 import css, { get } from '@styled-system/css'
 import shouldForwardProp from '@styled-system/should-forward-prop'
-import { View } from "react-primitives";
+import { View, Text as PrimitiveText } from "react-primitives";
 
 const sx = props => css(props.sx)(props.theme)
 const base = props => css(props.__css)(props.theme)
@@ -26,6 +26,26 @@ const variant = ({
     )(theme)
 
 export const Box = styled(View, {
+    shouldForwardProp
+})({
+        boxSizing: 'border-box',
+        margin: 0,
+        minWidth: 0,
+    },
+    base,
+    variant,
+    sx,
+    props => props.css,
+    compose(
+        space,
+        layout,
+        typography,
+        color,
+        flexbox,
+    ),
+)
+
+export const Text = styled(PrimitiveText, {
     shouldForwardProp
 })({
         boxSizing: 'border-box',
