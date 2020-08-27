@@ -3,6 +3,7 @@ import { Page } from 'react-figma';
 import {ThemeProvider} from "./styled";
 import { Box } from "./reflexbox";
 import { Text } from "./rebass";
+import {DesignSystem} from "./components/design-system/DesignSystem";
 
 const theme = {
     colors: {
@@ -27,20 +28,14 @@ const theme = {
 }
 
 
-export const App = () => {
+const App = () => {
     return (
-        <Page isCurrent name="Page X">
+        <Page isCurrent name="Design System">
             <ThemeProvider theme={theme}>
-                <Box
-                    sx={{
-                        p: 4,
-                        bg: 'primary',
-                    }}>
-                    <Text variant={'heading1'}>
-                        Hello
-                    </Text>
-                </Box>
+                <DesignSystem />
             </ThemeProvider>
         </Page>
     );
 };
+
+export { App };

@@ -4,7 +4,7 @@
   "description": "Boilerplate app for react-figma",
   "main": "./src/code.tsx",
   "scripts": {
-    "webpack:watch": "webpack --watch"
+    "webpack:watch": "webpack && webpack-dev-server --config webpack.ui.config.js"
   },
   "keywords": [
     "react",
