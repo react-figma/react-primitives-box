@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Page } from 'react-figma';
 import {ThemeProvider} from "./styled";
-import { Box } from "./reflexbox";
-import { Text } from "./rebass";
 import {DesignSystem} from "./components/design-system/DesignSystem";
 
 const theme = {

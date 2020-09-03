@@ -1,10 +1,13 @@
 import * as React from 'react';
-import { ThemeContext } from "styled-components/primitives";
 import {Spacers} from "./Spacers";
+import {Colors} from "./Colors";
+import {Flex} from "../../reflexbox";
 
-export const DesignSystem = () => {
-    const themeContext = React.useContext(ThemeContext);
-    return <>
+const DesignSystem = () => {
+    return <Flex>
+        <Colors style={{marginRight: 50}} />
         <Spacers />
-    </>
+    </Flex>
 }
+
+export { DesignSystem };

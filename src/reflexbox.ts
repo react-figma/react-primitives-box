@@ -66,5 +66,6 @@ export const Text = styled(PrimitiveText, {
 )
 
 export const Flex = styled(Box)({
-    display: 'flex'
+    display: 'flex',
+    flexDirection: "row"
 })

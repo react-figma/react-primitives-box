@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     }
 })
 
-export const Spacers = () => {
+const Spacers = () => {
     const themeContext = React.useContext(ThemeContext);
     const space = themeContext.space;
     const spaceKeys = Object.keys(space);
@@ -50,3 +50,5 @@ export const Spacers = () => {
         </View>
     </Frame>
 }
+
+export { Spacers };

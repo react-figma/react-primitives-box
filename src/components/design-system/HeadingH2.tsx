@@ -11,15 +11,19 @@ const styles = StyleSheet.create({
     }
 })
 
-export const HeadingH2 = (props: {text?: string}) => {
+const HeadingH2 = (props: {text?: string}) => {
     const {text} = props;
     return <>
         <Text style={styles.text}>
             {text}
         </Text>
-        <Line width={802}
+        <Line style={{
+            width: 802
+        }}
               strokeWeight={10}
               strokeAlign="CENTER"
               strokes={[{ type: 'SOLID', color: { r: 0, g: 0, b: 0 } }]} />
     </>
 };
+
+export { HeadingH2 };
