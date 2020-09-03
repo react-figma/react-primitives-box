@@ -11,9 +11,13 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#F2994A"
     },
+    valueEven: {
+        backgroundColor: "#56CCF2"
+    },
     text: {
         fontFamily: "Roboto",
-        fontSize: 12
+        fontSize: 12,
+        fontWeight: "900"
     }
 })
 
@@ -22,7 +26,7 @@ export const Spacers = () => {
     const space = themeContext.space;
     const spaceKeys = Object.keys(space);
     return <Frame name="spacing" >
-        {spaceKeys.map((key) => {
+        {spaceKeys.map((key, id) => {
             const spaceValue = space[key];
 
             if (!spaceValue) {
@@ -30,7 +34,7 @@ export const Spacers = () => {
             }
 
             return <Component name={"Spacing-" + key} key={key} style={styles.component}>
-                <View style={[styles.value, {
+                <View style={[styles.value, id % 2 === 0 && styles.valueEven, {
                     width: spaceValue,
                     height: spaceValue,
                 }]}>
