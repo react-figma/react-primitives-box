@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ThemeContext } from "styled-components/primitives";
 import {Component, Frame, View, StyleSheet, Text} from "react-figma";
+import {HeadingH2} from "./HeadingH2";
 
 const styles = StyleSheet.create({
     component: {
@@ -26,23 +27,26 @@ export const Spacers = () => {
     const space = themeContext.space;
     const spaceKeys = Object.keys(space);
     return <Frame name="spacing" >
-        {spaceKeys.map((key, id) => {
-            const spaceValue = space[key];
+        <HeadingH2 text="spacing" />
+        <View style={{marginTop: 50}}>
+            {spaceKeys.map((key, id) => {
+                const spaceValue = space[key];
 
-            if (!spaceValue) {
-                return;
-            }
+                if (!spaceValue) {
+                    return;
+                }
 
-            return <Component name={"Spacing-" + key} key={key} style={styles.component}>
-                <View style={[styles.value, id % 2 === 0 && styles.valueEven, {
-                    width: spaceValue,
-                    height: spaceValue,
-                }]}>
-                    <Text style={[styles.text, spaceValue < 16 && {fontSize: spaceValue - 1}]}>
-                        {spaceValue}
-                    </Text>
-                </View>
-            </Component>
-        })}
+                return <Component name={"Spacing-" + key} key={key} style={styles.component}>
+                    <View style={[styles.value, id % 2 === 0 && styles.valueEven, {
+                        width: spaceValue,
+                        height: spaceValue,
+                    }]}>
+                        <Text style={[styles.text, spaceValue < 16 && {fontSize: spaceValue - 1}]}>
+                            {spaceValue}
+                        </Text>
+                    </View>
+                </Component>
+            })}
+        </View>
     </Frame>
 }
