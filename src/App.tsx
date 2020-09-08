@@ -18,9 +18,18 @@ const theme = {
     fontSizes: [12, 16, 18, 20, 24, 32, 40, 64, 96],
     text: {
         heading1: {
-            fontFamily: "roboto",
-            fontSize: 5,
-            color: "background"
+            fontFamily: "Roboto",
+            fontSize: 96,
+            fontWeight: "900"
+        },
+        heading2: {
+            fontFamily: "Roboto",
+            fontSize: 64,
+            fontWeight: "900"
+        },
+        body: {
+            fontFamily: "Roboto",
+            fontSize: 18
         }
     }
 }
@@ -28,11 +37,9 @@ const theme = {
 
 const App = () => {
     return (
-        <Page isCurrent name="Design System">
-            <ThemeProvider theme={theme}>
-                <DesignSystem />
-            </ThemeProvider>
-        </Page>
+        <ThemeProvider theme={theme}>
+            <DesignSystem />
+        </ThemeProvider>
     );
 };
 
