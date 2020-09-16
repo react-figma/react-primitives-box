@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "rootDirs": ["src"],
+    "baseUrl": "src",
+    "skipLibCheck": true,
+    "declaration": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@figma"
+    ],
+    "paths": {
+      "react-primitives-box": ["../../../src/index.ts"]
+    }
+  }
+}
