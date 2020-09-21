@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Page } from "react-figma";
-import { Box, Text } from "react-primitives-box";
-import { ThemeProvider } from "styled-components";
+import { Box, Text, ThemeProvider } from "react-primitives-box";
 
 const theme = {
   colors: {

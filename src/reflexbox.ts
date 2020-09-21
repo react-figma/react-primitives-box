@@ -13,8 +13,11 @@ import { View, Text as PrimitiveText } from "react-primitives";
 
 const sx = (props) => css(props.sx)(props.theme);
 const base = (props) => css(props.__css)(props.theme);
-const variant = ({ theme, variant, tx = "variants" }) =>
-  css(get(theme, tx + "." + variant, get(theme, variant)))(theme);
+const variant = (defaultTx = "variants") => ({
+  theme,
+  variant,
+  tx = defaultTx,
+}) => css(get(theme, tx + "." + variant, get(theme, variant)))(theme);
 
 export const Box = styled(View, {
   shouldForwardProp,
@@ -25,7 +28,7 @@ export const Box = styled(View, {
     minWidth: 0,
   },
   base,
-  variant,
+  variant(),
   sx,
   (props) => props.css,
   compose(space, layout, typography, color, flexbox)
@@ -40,7 +43,7 @@ export const Text = styled(PrimitiveText, {
     minWidth: 0,
   },
   base,
-  variant,
+  variant("text"),
   sx,
   (props) => props.css,
   compose(space, layout, typography, color, flexbox)

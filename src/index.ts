@@ -1,3 +1,2 @@
-export { Box } from "./reflexbox";
-export { Text } from "./reflexbox";
-export { Flex } from "./reflexbox";
+export { Box, Text, Flex } from "./reflexbox";
+export { ThemeProvider, default as styled } from "./styled";
