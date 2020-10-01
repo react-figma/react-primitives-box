@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": ".",
+    "outDir": "dist",
     "module": "commonjs",
     "target": "es5",
     "lib": ["es5", "es6", "es7", "es2017", "dom"],
@@ -12,10 +12,15 @@
     "baseUrl": "src",
     "skipLibCheck": true,
     "declaration": true,
+    "paths": {
+      "react-primitives-box": ["../../../src/index.ts"]
+    },
     "typeRoots": [
-      "./node_modules/@types"
+      "./node_modules/@types",
+      "./node_modules/@figma"
     ]
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/__tests__/**"]
+  "exclude": ["node_modules", "dist", "**/__tests__/**"]
 }
+
