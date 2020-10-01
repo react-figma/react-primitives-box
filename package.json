@@ -1,6 +1,6 @@
 {
   "name": "react-primitives-box",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "React Primitives implementation of Reflexbox",
   "scripts": {
     "tsc": "tsc -p tsconfig.json --noEmit",
