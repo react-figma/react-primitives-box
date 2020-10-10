@@ -248,6 +248,10 @@ Prop | Theme Key
 `alignSelf` | N/A
 `order` | N/A
 
+## Examples
+
+- [react-figma](/examples/react-figma) — Using with [react-figma](https://github.com/react-figma/react-figma) example.
+
 ## About
 
 This library is an implementation of [reflexbox](https://rebassjs.org/reflexbox) on [React Primitives](https://github.com/lelandrichardson/react-primitives) and [styled-components](https://styled-components.com/).
