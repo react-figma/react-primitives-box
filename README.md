@@ -45,7 +45,9 @@ export default props =>
     <Box
       width={[ 1, 1/2 ]}
       p={3}>
-      Box
+      <Text>
+        Box
+      </Text>
     </Box>
   </Flex>
 ```
